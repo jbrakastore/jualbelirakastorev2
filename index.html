@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="banner.jpg">
 <title>JBRAKASTORE</title>
-
-<!-- FONT BARU -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,81 +13,89 @@
 
 <!-- LOADING -->
 <div id="loading">
-  <img src="banner.jpg">
+  <img src="banner.jpg" class="logo-loading">
   <h1>JBRAKA<span>STORE</span></h1>
-  <div class="bar"><div id="progress"></div></div>
-</div>
-
-<!-- NAV -->
-<div class="nav">
-  <h2>JBRAKA<span>STORE</span></h2>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-</div>
-
-<!-- SIDEBAR -->
-<div id="sidebar">
-  <div class="close-btn" onclick="toggleMenu()">✕</div>
-
-  <button class="menu red" onclick="refreshPage()">🏠 Beranda</button>
-  <button class="menu red" onclick="wa()">📱 WhatsApp</button>
-</div>
-
-<!-- POPUP -->
-<div id="popup">
-  <div class="box">
-    <h2>INFORMASI</h2>
-    <img src="link saluran.jpg">
-    <button onclick="join()">Join Sekarang</button>
-    <label><input type="checkbox" id="hideBox"> Sembunyikan 5 Jam</label>
-    <button class="close" onclick="closePopup()">Tutup</button>
+  <div class="bar">
+    <div id="progress"></div>
   </div>
 </div>
 
-<!-- CONTENT -->
-<div class="container">
+<!-- HEADER -->
+<header class="header">
+  <div class="logo-wrap">
+    <img src="banner.jpg" class="logo">
+    <h1>JBRAKA<span>STORE</span></h1>
+  </div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
 
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="close" onclick="toggleMenu()">✖</div>
+  <button onclick="location.reload()" class="btn red">🏠 Beranda</button>
+  <button onclick="wa()" class="btn red">📱 WhatsApp</button>
+</div>
+
+<!-- BANNER -->
 <img src="banner.jpg" class="banner">
 
+<!-- PRODUK -->
 <div class="produk">
 
   <div class="card">
     <img src="banner.jpg">
     <h3>Akun <span class="red-text">Sultan</span></h3>
-    <p class="harga">Sesuai Spek</p>
-    <button onclick="beli()">Beli</button>
+    <p class="price">Sesuai Spek</p>
+    <button onclick="beli()" class="buy">Beli</button>
   </div>
 
   <div class="card">
     <img src="banner.jpg">
     <h3>Akun <span class="red-text">Murah</span></h3>
-    <p class="harga">Sesuai Spek</p>
-    <button onclick="beli()">Beli</button>
+    <p class="price">Sesuai Spek</p>
+    <button onclick="beli()" class="buy">Beli</button>
   </div>
 
 </div>
 
-<!-- TESTIMONI -->
+<!-- TESTI -->
 <div class="testi">
   <div class="stars">⭐⭐⭐⭐⭐</div>
-
-  <div class="testi-text active">"Cepat & Aman" - Budi</div>
-  <div class="testi-text">"Trusted Banget" - Andi</div>
-
-  <div class="indicator">
-    <div id="line1" class="active"></div>
-    <div id="line2"></div>
+  <p id="testiText">"Cepat & Aman" - Andi</p>
+  <div class="dots">
+    <span id="d1"></span>
+    <span id="d2"></span>
   </div>
 </div>
 
-<!-- KENAPA -->
-<div class="kenapa">
+<!-- WHY -->
+<div class="why">
   <h2>Kenapa <span class="red-text">JBRAKA?</span></h2>
-
-  <div class="why">Harga Termurah</div>
-  <div class="why">Proses Cepat</div>
-  <div class="why">Trusted Seller</div>
+  <div class="why-box">Harga Termurah</div>
+  <div class="why-box">Proses Cepat</div>
+  <div class="why-box">Trusted Seller</div>
 </div>
 
+<!-- ✅ POPUP (SUDAH DIPOSISI BENAR) -->
+<div id="popup">
+  <div class="popup-box">
+    
+    <h2>INFORMASI</h2>
+
+    <img src="link saluran.jpg" class="popup-img">
+
+    <div class="popup-row">
+      <button onclick="join()" class="btn red">Join sekarang</button>
+
+      <label class="popup-check">
+        <input type="checkbox" id="hideBox">
+        Sembunyikan 5 jam
+      </label>
+    </div>
+
+    <button onclick="closePopup()" class="btn red">Tutup</button>
+
+  </div>
 </div>
 
 <script src="script.js"></script>
