@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JBRAKASTORE</title>
+
+<!-- FONT BARU -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+  <img src="banner.jpg">
+  <h1>JBRAKA<span>STORE</span></h1>
+  <div class="bar"><div id="progress"></div></div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <h2>JBRAKA<span>STORE</span></h2>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+
+  <button class="menu red" onclick="refreshPage()">🏠 Beranda</button>
+  <button class="menu red" onclick="wa()">📱 WhatsApp</button>
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="box">
+    <h2>INFORMASI</h2>
+    <img src="link saluran.jpg">
+    <button onclick="join()">Join Sekarang</button>
+    <label><input type="checkbox" id="hideBox"> Sembunyikan 5 Jam</label>
+    <button class="close" onclick="closePopup()">Tutup</button>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<img src="banner.jpg" class="banner">
+
+<div class="produk">
+
+  <div class="card">
+    <img src="banner.jpg">
+    <h3>Akun <span class="red-text">Sultan</span></h3>
+    <p class="harga">Sesuai Spek</p>
+    <button onclick="beli()">Beli</button>
+  </div>
+
+  <div class="card">
+    <img src="banner.jpg">
+    <h3>Akun <span class="red-text">Murah</span></h3>
+    <p class="harga">Sesuai Spek</p>
+    <button onclick="beli()">Beli</button>
+  </div>
+
+</div>
+
+<!-- TESTIMONI -->
+<div class="testi">
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+
+  <div class="testi-text active">"Cepat & Aman" - Budi</div>
+  <div class="testi-text">"Trusted Banget" - Andi</div>
+
+  <div class="indicator">
+    <div id="line1" class="active"></div>
+    <div id="line2"></div>
+  </div>
+</div>
+
+<!-- KENAPA -->
+<div class="kenapa">
+  <h2>Kenapa <span class="red-text">JBRAKA?</span></h2>
+
+  <div class="why">Harga Termurah</div>
+  <div class="why">Proses Cepat</div>
+  <div class="why">Trusted Seller</div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
