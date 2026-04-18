@@ -16,7 +16,7 @@ let int = setInterval(()=>{
   }
 },50);
 
-// fallback anti stuck
+// fallback
 setTimeout(()=>{
   load.style.display="none";
   checkPopup();
@@ -47,73 +47,18 @@ function closePopup(){
 
 // BUTTON
 function join(){
-  window.open("https://wa.me/895386000337","_blank");
+  window.open("https://wa.me/6285813517292","_blank");
 }
 
 function beli(){
-  window.open("https://wa.me/895386000337?text=Halo apakah stock akun masih ada?","_blank");
+  window.open("https://wa.me/6285813517292?text=Halo%20apakah%20stock%20akun%20masih%20ada?","_blank");
 }
 
 function wa(){
-  window.open("https://wa.me/895386000337","_blank");
-}
-
-function refreshPage(){
-  location.reload();
+  window.open("https://wa.me/6285813517292","_blank");
 }
 
 // MENU
 function toggleMenu(){
   document.getElementById("sidebar").classList.toggle("active");
 }
-
-// TESTI SLIDE
-let i=0;
-setInterval(()=>{
-  let t=document.querySelectorAll(".testi-text");
-  let l1=document.getElementById("line1");
-  let l2=document.getElementById("line2");
-
-  t[i].classList.remove("active");
-  i=(i+1)%t.length;
-  t[i].classList.add("active");
-
-  if(i==0){
-    l1.classList.add("active");
-    l2.classList.remove("active");
-  }else{
-    l2.classList.add("active");
-    l1.classList.remove("active");
-  }
-
-},3000);
-
-// NOTIF FAKE SMOOTH
-let names=["Rizky","Budi","Andi","Dika"];
-let produk=["Akun Murah","Akun Sultan"];
-
-setInterval(()=>{
-  let el=document.createElement("div");
-  el.className="notif";
-
-  let nama=names[Math.floor(Math.random()*names.length)];
-  let prod=produk[Math.floor(Math.random()*produk.length)];
-
-  el.innerHTML=`
-    <img src="banner.jpg">
-    <div>
-      <b>${nama}</b><br>
-      membeli <span style="color:red">${prod}</span>
-    </div>
-  `;
-
-  document.body.appendChild(el);
-
-  setTimeout(()=>el.classList.add("show"),100);
-
-  setTimeout(()=>{
-    el.classList.remove("show");
-    setTimeout(()=>el.remove(),500);
-  },3000);
-
-},8000);
