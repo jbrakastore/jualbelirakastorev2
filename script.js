@@ -172,3 +172,25 @@ function beli(){
 function wa(){
   window.open("https://wa.me/6285813517292","_blank");
     }
+/* TESTI ANIMATION */
+#testiText{
+  transition:0.3s;
+}
+
+/* FAKE BUY */
+.fake-buy{
+  position:fixed;
+  bottom:-100px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#132c4d;
+  padding:10px 20px;
+  border-radius:20px;
+  box-shadow:0 0 10px red;
+  transition:0.5s;
+  z-index:999;
+}
+
+.fake-buy.show{
+  bottom:20px;
+}
