@@ -172,25 +172,52 @@ function beli(){
 function wa(){
   window.open("https://wa.me/6285813517292","_blank");
     }
-/* TESTI ANIMATION */
-#testiText{
-  transition:0.3s;
-}
+// =====================
+// TESTI BERGANTIAN
+// =====================
+let testi = [
+'"Cepat & Aman" - Supri',
+'"Trusted Banget" - Yanto',
+'"Murah & Aman" - Dedi',
+'"Proses Cepat" - Umar'
+];
 
-/* FAKE BUY */
-.fake-buy{
-  position:fixed;
-  bottom:-100px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#132c4d;
-  padding:10px 20px;
-  border-radius:20px;
-  box-shadow:0 0 10px red;
-  transition:0.5s;
-  z-index:999;
-}
+let testiIndex = 0;
 
-.fake-buy.show{
-  bottom:20px;
-}
+setInterval(()=>{
+  testiIndex++;
+  if(testiIndex >= testi.length){
+    testiIndex = 0;
+  }
+
+  let t = document.getElementById("testiText");
+  if(!t) return;
+
+  t.style.opacity = 0;
+
+  setTimeout(()=>{
+    t.innerText = testi[testiIndex];
+    t.style.opacity = 1;
+  },300);
+
+},3000);
+
+
+// =====================
+// FAKE BUY
+// =====================
+setInterval(()=>{
+  let fb = document.createElement("div");
+  fb.className = "fake-buy";
+  fb.innerText = "🔥 Seseorang baru saja membeli akun!";
+  document.body.appendChild(fb);
+
+  setTimeout(()=>{
+    fb.classList.add("show");
+  },100);
+
+  setTimeout(()=>{
+    fb.remove();
+  },4000);
+
+},10000);
